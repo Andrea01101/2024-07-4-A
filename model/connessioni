@@ -1,0 +1,12 @@
+from dataclasses import dataclass
+
+from model.sighting import Sighting
+
+
+@dataclass
+class Connessioni:
+    s1: Sighting
+    s2: Sighting
+
+    def __str__(self):
+        return f"Arco: {self.s1.id}-{self.s2.id}"
